@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f4aa23</color>
+    <color name="colorPrimaryDark">#f4aa23</color>
+    <color name="colorAccent">#35140e</color>
+    <color name="colorProgressBar">#35140e</color>
+    <color name="settings_txt_color">#35140e</color>
+    <color name="setting_btn_bg_color">#fff</color>
+    <color name="settings_heading">#fff</color>
+    <color name="white">#fff</color>
+    <color name="contact_txt_color">#35140e</color>
+    <color name="profile_save_button">#35140e</color>
+    <color name="black">#000</color>
+    <color name="search_maps_color">#35140e</color>
+    <color name="maps_second_payment_bg">#fff</color>
+    <color name="nav_color">#35140E</color>
+    <color name="button_payment_ongoing">#eeeeee</color>
+    <color name="heading_bg">#d88f0b</color>
+    <color name="green_confirmed">#9cda77</color>
+
+</resources>

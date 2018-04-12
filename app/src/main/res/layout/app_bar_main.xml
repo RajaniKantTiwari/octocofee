@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent" />
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="me.prateeksaigal.ocotocoffee.MapsActivity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/search_maps_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/shadow_bg_primary"
+                android:drawableLeft="@drawable/places_ic_search"
+                android:drawableStart="@drawable/places_ic_search"
+                android:drawableTint="@color/search_maps_color"
+                android:hint="@string/maps_search"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textColorHint="@color/search_maps_color"
+                android:textColor="@color/search_maps_color" />
+        </LinearLayout>
+
+        <org.lucasr.twowayview.TwoWayView
+            android:id="@+id/scroll_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:orientation="horizontal">
+
+        </org.lucasr.twowayview.TwoWayView>
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="settings_txt_heading_size">20sp</dimen>
+    <dimen name="settings_edit_height">35dp</dimen>
+    <!--Animation Duration-->
+    <integer name="duration">400</integer>
+    <integer name="zoom_duration">800</integer>
+
+</resources>

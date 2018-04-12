@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+
+    tools:context="me.prateeksaigal.ocotocoffee.ProfileActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_action_keyboard_backspace" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/profile"
+            android:textColor="@color/settings_heading"
+            android:textSize="@dimen/settings_txt_heading_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/change_user_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@color/nav_color">
+
+            <ImageView
+                android:id="@+id/user_img"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/user" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/shadow_bg_primary"
+                android:drawableLeft="@drawable/ic_user_profile"
+                android:gravity="center"
+                android:hint="Username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/shadow_bg_primary"
+                android:drawableLeft="@drawable/ic_contact"
+                android:gravity="center"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/shadow_bg_primary"
+                android:drawableLeft="@drawable/ic_local_phone"
+                android:gravity="center"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/profile_save_button"
+                android:text="@string/save"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

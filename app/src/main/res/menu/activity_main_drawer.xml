@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/gp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user_profile"
+            android:title="@string/profile" />
+    </group>
+    <group
+        android:id="@+id/gp2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/payment_icon"
+            android:title="@string/payments" />
+    </group>
+
+    <group
+        android:id="@+id/gp8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/order_icon"
+            android:title="@string/orders" />
+    </group>
+
+    <group
+        android:id="@+id/gp3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title="@string/contact" />
+    </group>
+    <group
+        android:id="@+id/gp4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_people_outline"
+            android:title="@string/about_us" />
+    </group>
+
+    <group
+        android:id="@+id/gp5"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+    <group
+        android:id="@+id/gp6"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_settings_2"
+            android:title="" />
+    </group>
+
+
+</menu>
