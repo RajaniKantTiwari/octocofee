@@ -41,22 +41,22 @@ android {
     productFlavors {
         dev {
             signingConfig signingConfigs.config
-            applicationId 'com.app.warantywise'
+            applicationId 'me.prateeksaigal.ocotocoffee'
             dimension "environment"
-            buildConfigField "String", "BASE_URL", "\"http://warranteewise.in/rest/web/index.php/v1/\""
+            buildConfigField "String", "BASE_URL", "\"http://thephantomgrid.com/rest/web/index.php/v2/\""
         }
         qa {
             signingConfig signingConfigs.config
-            applicationId 'com.app.warantywise'
+            applicationId 'me.prateeksaigal.ocotocoffee'
             dimension "environment"
         }
         production {
             signingConfig signingConfigs.config
-            applicationId 'com.app.warantywise'
+            applicationId 'me.prateeksaigal.ocotocoffee'
             dimension "environment"
         }
         staging {
-            applicationId 'com.app.warantywise'
+            applicationId 'me.prateeksaigal.ocotocoffee'
             signingConfig signingConfigs.config
             dimension "environment"
         }
@@ -71,6 +71,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //noinspection GradleCompatible
     compile "com.android.support:appcompat-v7:${project.supportLibrary}"
     compile "com.android.support:design:${project.supportLibrary}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

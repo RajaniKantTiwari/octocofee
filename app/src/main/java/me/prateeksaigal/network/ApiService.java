@@ -15,4 +15,7 @@ public interface ApiService {
 
     @GET("register/logout")
     Observable<BaseResponse> logout();
+
+    @POST("register/login")
+    Observable<BaseResponse> loginMerchant(@Body LoginRequest request);
 }

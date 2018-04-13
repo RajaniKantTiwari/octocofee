@@ -10,8 +10,8 @@ import me.prateeksaigal.network.request.LoginRequest;
 public interface Repository {
     Observable<BaseResponse> getLoginDetail(LoginRequest request);
 
-
     Observable<BaseResponse> logout();
 
+    Observable<BaseResponse> loginMerchant(LoginRequest request);
 
 }

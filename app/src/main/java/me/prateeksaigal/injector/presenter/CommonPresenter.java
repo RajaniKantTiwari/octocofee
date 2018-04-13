@@ -13,6 +13,7 @@ import me.prateeksaigal.base.Presenter;
 import me.prateeksaigal.network.DefaultApiObserver;
 import me.prateeksaigal.network.Repository;
 import me.prateeksaigal.network.request.LoginRequest;
+import me.prateeksaigal.ocotocoffee.MapsActivity;
 
 /**
  * Created by arvind on 09/11/17.
@@ -53,4 +54,22 @@ public class CommonPresenter implements Presenter<MvpView> {
     }
 
 
+    public void loginMerchant(Activity activity, LoginRequest loginRequest) {
+        mView.showProgress();
+        mRepository.loginMerchant(loginRequest).
+                subscribeOn(Schedulers.io()).
+                observeOn(AndroidSchedulers.mainThread()).subscribeWith(new DefaultApiObserver<BaseResponse>(activity) {
+            @Override
+            public void onResponse(BaseResponse response) {
+                mView.hideProgress();
+                mView.onSuccess(response, 2);
+            }
+
+            @Override
+            public void onError(Throwable call, BaseResponse baseResponse) {
+                mView.hideProgress();
+                mView.onError(call, 2);
+            }
+        });
+    }
 }

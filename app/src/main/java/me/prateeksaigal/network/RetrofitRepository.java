@@ -27,6 +27,10 @@ public class RetrofitRepository implements Repository {
         return apiService.logout();
     }
 
+    @Override
+    public Observable<BaseResponse> loginMerchant(LoginRequest request) {
+        return apiService.loginMerchant(request);
+    }
 
 
 }

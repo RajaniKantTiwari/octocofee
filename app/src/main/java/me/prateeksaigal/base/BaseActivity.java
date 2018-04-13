@@ -2,7 +2,9 @@ package me.prateeksaigal.base;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import me.prateeksaigal.OctoCofeeApplication;
+import me.prateeksaigal.injector.component.CommonComponent;
+import me.prateeksaigal.injector.component.DaggerCommonComponent;
+import me.prateeksaigal.injector.module.CommonModule;
 import me.prateeksaigal.ocotocoffee.R;
 import me.prateeksaigal.utils.NetworkUtility;
 
@@ -28,7 +34,20 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView,
     private Snackbar mSnackbar;
     private boolean mAlive;
     private Dialog mLoadingDialog;
+    private CommonComponent mActivityComponent;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivityComponent= DaggerCommonComponent.builder().
+                commonModule(new CommonModule(this)).
+                applicationComponent(((OctoCofeeApplication) getApplication()).
+                        getApplicationComponent()).build();
+        attachView();
+    }
 
+    public CommonComponent getActivityComponent() {
+        return mActivityComponent;
+    }
     //to attach View
     public abstract void attachView();
 

@@ -53,8 +53,12 @@ import org.lucasr.twowayview.TwoWayView;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 import me.prateeksaigal.base.BaseActivity;
 import me.prateeksaigal.base.BaseResponse;
+import me.prateeksaigal.injector.presenter.CommonPresenter;
+import me.prateeksaigal.network.request.LoginRequest;
 import me.prateeksaigal.ocotocoffee.adapter.CoffeeAdapter;
 import me.prateeksaigal.utils.CommonUtility;
 
@@ -108,7 +112,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     private double userLat, userLon;
     private CoffeeAdapter adpCoffee;
     private TwoWayView lvTest;
-
+    @Inject
+    CommonPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -246,7 +251,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
 
     @Override
     public void attachView() {
-
+        getActivityComponent().inject(this);
+        presenter.attachView(this);
     }
 
     @Override
@@ -282,6 +288,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
 
         lvTest = (TwoWayView) findViewById(R.id.scroll_bar);
         lvTest.setAdapter(adpCoffee);
+
+        presenter.loginMerchant(this, new LoginRequest("abcd@gmail.com", "12345678"));
 
     }
 
